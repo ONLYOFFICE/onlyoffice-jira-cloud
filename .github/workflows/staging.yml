@@ -2,31 +2,10 @@ name: Deploy
 
 on:
   workflow_dispatch:
-  push:
-    tags:
-      - 'v*'
 
 jobs:
-  determine-environment:
-    runs-on: ubuntu-latest
-    outputs:
-      environment: ${{ steps.env.outputs.name }}
-    steps:
-      - name: Determine environment
-        id: env
-        run: |
-          if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]; then
-            ENVIRONMENT="staging"
-          else
-            ENVIRONMENT="production"
-          fi
-          echo "name=$ENVIRONMENT" >> $GITHUB_OUTPUT
-          echo "Selected environment: $ENVIRONMENT"
-
   deploy:
-    needs: determine-environment
     runs-on: ubuntu-latest
-    environment: ${{ needs.determine-environment.outputs.environment }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -48,11 +27,11 @@ jobs:
         run: npm run build
         working-directory:  ./forge/static/onlyoffice-jira-docs-forge-custom-ui
       - name: Deploy Forge app
-        run: forge deploy --environment ${{ needs.determine-environment.outputs.environment }} --non-interactive
+        run: forge deploy --environment staging --non-interactive
         working-directory: ./forge
         env:
           FORGE_EMAIL: ${{ secrets.FORGE_EMAIL }}
           FORGE_API_TOKEN: ${{ secrets.FORGE_API_TOKEN }}
           FORGE_APP_ID: ${{ secrets.FORGE_APP_ID }}
-          FORGE_REMOTE_APP_URL: ${{ vars.FORGE_REMOTE_APP_URL }}
+          FORGE_REMOTE_APP_URL: ${{ secrets.FORGE_REMOTE_APP_URL_STAGING }}
       
