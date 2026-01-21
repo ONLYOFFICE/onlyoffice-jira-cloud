@@ -1,5 +1,6 @@
 # Change Log
 
+## 1.1.0
 ## Added
 - list of files
 - open attachments on viewing and editing
