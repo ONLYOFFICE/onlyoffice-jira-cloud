@@ -1,4 +1,4 @@
-name: Deploy
+name: Staging
 
 on:
   workflow_dispatch:
@@ -32,4 +32,3 @@ jobs:
           FORGE_API_TOKEN: ${{ secrets.FORGE_API_TOKEN }}
           FORGE_APP_ID: ${{ secrets.FORGE_APP_ID }}
           FORGE_REMOTE_APP_URL: ${{ secrets.FORGE_REMOTE_APP_URL_STAGING }}
-      
