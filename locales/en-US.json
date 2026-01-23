@@ -1,0 +1,129 @@
+{
+  "page": {
+    "settings": {
+      "title": "ONLYOFFICE Docs Configuration",
+      "welcome": {
+        "header": "Welcome to ONLYOFFICE Docs!",
+        "description": "View, edit, and co-edit office documents from Jira Cloud using ONLYOFFICE Docs",
+        "links": {
+          "learn-more": "Learn more",
+          "suggest-feature": "Suggest a feature"
+        }
+      },
+      "connections-settings": {
+        "header": "Connection Settings",
+        "fields": {
+          "url": {
+            "title": "ONLYOFFICE Docs address",
+            "description": "Here, please specify the address of your ONLYOFFICE Docs server."
+          },
+          "security-key": {
+            "title": "ONLYOFFICE Docs secret key",
+            "description": "Use the auto-generated JWT secret key or set your own here and the same one in the ONLYOFFICE Docs config file."
+          },
+          "security-header": {
+            "title": "Authorization header",
+            "description": "Leave blank to use default header"
+          },
+          "demo": {
+            "title": "Connect to demo ONLYOFFICE Docs server",
+            "description-active": "You are successfully connected to the demo server. It will be available until {time}. To disable it, uncheck the box.",
+            "description-availabale": "This is a public test server, please do not use it for private sensitive data. The server will be available during a 30-day period.",
+            "description-not-availabale": "The 30-day test period is over. You are no longer able to connect to the demo server."
+          }
+        }
+      },
+      "messages": {
+        "settings-saved": "Settings saved successfully.",
+        "save-settings-failed": "Error saving settings, please try again"
+      }
+    },
+    "editor": {
+      "messages": {
+        "stop-editing-by-cause-delete": "Editing of this document has been stopped because it has been removed from the issue.",
+        "stop-editing-by-cause-session-expired": "Editing of this document has been stopped because the current session has expired.",
+        "session-expired": "The current session has expired.",
+        "please-save-changes": "Please make sure to save any changes to prevent data loss.",
+        "editor-will-be-reloaded": "The editor will be reloaded to continue working in ({time}).",
+        "update-session-failed": "Unfortunately, it was not possible to extend the session.",
+        "editin-will-stop": "Editing will stop in ({time}).",
+        "you-using-demo-server": "You are using the public demo server of ONLYOFFICE Docs. Please avoid storing any private or sensitive data."
+      }
+    },
+    "main": {
+      "empty-file-list": "There is nothing here yet. Upload or create a file to get started."
+    }, 
+    "create": {
+      "title": "Create with ONLYOFFICE",
+      "fields": {
+        "title": "Title",
+        "document-type": {
+          "title": "Document Type",
+          "options": {
+            "word": "Text document",
+            "cell": "Spreadsheet",
+            "slide": "Presentation",
+            "pdf": "PDF Form"
+          }
+        },
+        "new-document": "New document"
+      },
+      "messages": {
+        "invalid-file-name": "The file name contains invalid characters: \\ / : * ? \" < > |",
+        "attachment-created": "Attachment \"{filename}\" created successfully.",
+        "create-attachment-failed": "Failed to create attachment. Please try again."
+      }
+    }
+  },
+  "error-state": {
+    "common": {
+      "title": "App loading error",
+      "description": "An unexpected error occurred while loading the application. Please reload it to continue."
+    },
+    "docs-api-undefined": {
+      "title": "ONLYOFFICE Docs loading error",
+      "description": "ONLYOFFICE Docs server cannot be reached. Please contact admin."
+    }
+  },
+  "buttons": {
+    "create": {
+      "title": "Create"
+    },
+    "cancel": {
+      "title": "Cancel"
+    },
+    "close": {
+      "title": "Close"
+    },
+    "save": {
+      "title": "Save"
+    },
+    "get-now": {
+      "title": "Get Now"
+    },
+    "reload-app": {
+      "title": "Reload App"
+    },
+    "create-in-app": {
+      "title": "Create with ONLYOFFICE"
+    },
+    "view-in-app": {
+      "title": "View in ONLYOFFICE"
+    },
+    "edit-in-app": {
+      "title": "Edit in ONLYOFFICE"
+    },
+    "download": {
+      "title": "Download"
+    }
+  },
+  "labels": {
+    "warning": "Warning!",
+    "loading": "Loading",
+    "last-updated": "{size} / Last updated: {time} by {user}"
+  },
+  "docs-cloud-banner": {
+    "header": "ONLYOFFICE Docs Cloud",
+    "description": "Easily launch the editors in the cloud without downloading and installation"
+  }
+}

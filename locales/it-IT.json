@@ -1,0 +1,129 @@
+{
+  "page": {
+    "settings": {
+      "title": "Configurazione ONLYOFFICE Docs",
+      "welcome": {
+        "header": "Benvenuto in ONLYOFFICE Docs!",
+        "description": "Visualizza, modifica, co-edita documenti d'ufficio da Jira Cloud usando ONLYOFFICE Docs",
+        "links": {
+          "learn-more": "Scopri di più",
+          "suggest-feature": "Suggerisci una funzione"
+        }
+      },
+      "connections-settings": {
+        "header": "Impostazioni di connessione",
+        "fields": {
+          "url": {
+            "title": "Indirizzo ONLYOFFICE Docs",
+            "description": "Specifica qui l'indirizzo del tuo server ONLYOFFICE Docs."
+          },
+          "security-key": {
+            "title": "Chiave segreta ONLYOFFICE Docs",
+            "description": "Usa la chiave segreta JWT generata automaticamente o imposta la tua qui e la stessa nel file di configurazione di ONLYOFFICE Docs."
+          },
+          "security-header": {
+            "title": "Intestazione di autorizzazione",
+            "description": "Lascia vuoto per usare l'intestazione predefinita"
+          },
+          "demo": {
+            "title": "Connetti al server demo di ONLYOFFICE Docs",
+            "description-active": "Sei connesso con successo al server demo. Sarà disponibile fino a {time}. Per disattivarlo, deseleziona la casella.",
+            "description-availabale": "Questo è un server di test pubblico, non usarlo per dati privati o sensibili. Il server sarà disponibile per un periodo di 30 giorni.",
+            "description-not-availabale": "Il periodo di prova di 30 giorni è terminato. Non puoi più connetterti al server demo."
+          }
+        }
+      },
+      "messages": {
+        "settings-saved": "Le impostazioni sono state salvate correttamente.",
+        "save-settings-failed": "Errore durante il salvataggio delle impostazioni. Riprova"
+      }
+    },
+    "editor": {
+      "messages": {
+        "stop-editing-by-cause-delete": "La modifica di questo documento è stata interrotta perché è stato rimosso dal ticket.",
+        "stop-editing-by-cause-session-expired": "La modifica di questo documento è stata interrotta perché la sessione corrente è scaduta.",
+        "session-expired": "La sessione corrente è scaduta.",
+        "please-save-changes": "Assicurati di salvare eventuali modifiche per evitare la perdita dei dati.",
+        "editor-will-be-reloaded": "L'editor verrà ricaricato per continuare a lavorare in ({time}).",
+        "update-session-failed": "Purtroppo non è stato possibile estendere la sessione.",
+        "editin-will-stop": "La modifica terminerà in ({time}).",
+        "you-using-demo-server": "Stai usando il server demo pubblico di ONLYOFFICE Docs. Evita di salvare dati privati o sensibili."
+      }
+    },
+    "main": {
+      "empty-file-list": "Qui non c'è ancora nulla. Carica o crea un file per iniziare."
+    },
+    "create": {
+      "title": "Crea con ONLYOFFICE",
+      "fields": {
+        "title": "Titolo",
+        "document-type": {
+          "title": "Tipo di documento",
+          "options": {
+            "word": "Documento",
+            "cell": "Foglio di calcolo",
+            "slide": "Presentazione",
+            "pdf": "Modulo PDF"
+          }
+        },
+        "new-document": "Nuovo documento"
+      },
+      "messages": {
+        "invalid-file-name": "Il nome del file contiene caratteri non validi: \\ / : * ? \" < > |",
+        "attachment-created": "Allegato \"{filename}\" creato con successo.",
+        "create-attachment-failed": "Creazione dell'allegato non riuscita. Riprova."
+      }
+    }
+  },
+  "error-state": {
+    "common": {
+      "title": "Errore di caricamento dell'app",
+      "description": "Si è verificato un errore imprevisto durante il caricamento dell'applicazione. Ricaricala per continuare."
+    },
+    "docs-api-undefined": {
+      "title": "Errore di caricamento ONLYOFFICE Docs",
+      "description": "Il server ONLYOFFICE Docs non è raggiungibile. Contatta l'amministratore."
+    }
+  },
+  "buttons": {
+    "create": {
+      "title": "Crea"
+    },
+    "cancel": {
+      "title": "Annulla"
+    },
+    "close": {
+      "title": "Chiudi"
+    },
+    "save": {
+      "title": "Salva"
+    },
+    "get-now": {
+      "title": "Ottieni ora"
+    },
+    "reload-app": {
+      "title": "Ricarica app"
+    },
+    "create-in-app": {
+      "title": "Crea con ONLYOFFICE"
+    },
+    "view-in-app": {
+      "title": "Visualizza in ONLYOFFICE"
+    },
+    "edit-in-app": {
+      "title": "Modifica in ONLYOFFICE"
+    },
+    "download": {
+      "title": "Scarica"
+    }
+  },
+  "labels": {
+    "warning": "Attenzione!",
+    "loading": "Caricamento",
+    "last-updated": "{size} / Ultimo aggiornamento: {time} da {user}"
+  },
+  "docs-cloud-banner": {
+    "header": "ONLYOFFICE Docs Cloud",
+    "description": "Avvia facilmente gli editor nel cloud senza download e installazione"
+  }
+}

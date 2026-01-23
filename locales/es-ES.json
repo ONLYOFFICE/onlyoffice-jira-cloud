@@ -1,0 +1,129 @@
+{
+  "page": {
+    "settings": {
+      "title": "Configuración de ONLYOFFICE Docs",
+      "welcome": {
+        "header": "¡Bienvenido/a a ONLYOFFICE Docs!",
+        "description": "Visualice, edite y coedite documentos ofimáticos desde Jira Cloud utilizando ONLYOFFICE Docs",
+        "links": {
+          "learn-more": "Más información",
+          "suggest-feature": "Sugerir una función"
+        }
+      },
+      "connections-settings": {
+        "header": "Ajustes de conexión",
+        "fields": {
+          "url": {
+            "title": "Dirección de ONLYOFFICE Docs",
+            "description": "Por favor, especifique aquí la dirección de su servidor de ONLYOFFICE Docs."
+          },
+          "security-key": {
+            "title": "Clave secreta de ONLYOFFICE Docs",
+            "description": "Utilice la clave secreta JWT generada automáticamente o establezca la suya propia aquí y la misma en el archivo de configuración de ONLYOFFICE Docs."
+          },
+          "security-header": {
+            "title": "Encabezado de autorización",
+            "description": "Deje en blanco para utilizar el encabezado predeterminado"
+          },
+          "demo": {
+            "title": "Conectarse al servidor de demostración de ONLYOFFICE Docs",
+            "description-active": "Se ha conectado correctamente al servidor de demostración. Estará disponible hasta {hora}. Para desactivarlo, desmarque la casilla.",
+            "description-availabale": "Este es un servidor público de pruebas, por favor no lo utilice para datos privados confidenciales. El servidor estará disponible durante un periodo de 30 días.",
+            "description-not-availabale": "El periodo de prueba de 30 días ha terminado. Ya no podrá conectarse al servidor de demostración."
+          }
+        }
+      },
+      "messages": {
+        "settings-saved": "Ajustes guardados correctamente.",
+        "save-settings-failed": "Error al guardar los ajustes, por favor, inténtelo de nuevo"
+      }
+    },
+    "editor": {
+      "messages": {
+        "stop-editing-by-cause-delete": "La edición de este documento se ha detenido porque se ha eliminado de la incidencia.",
+        "stop-editing-by-cause-session-expired": "La edición de este documento se ha detenido porque la sesión actual ha expirado.",
+        "session-expired": "La sesión actual ha expirado.",
+        "please-save-changes": "Por favor, asegúrese de guardar cualquier cambio para evitar la pérdida de datos.",
+        "editor-will-be-reloaded": "El editor se volverá a cargar para continuar trabajando en ({time}).",
+        "update-session-failed": "Lamentablemente, no ha sido posible prolongar la sesión.",
+        "editin-will-stop": "La edición se detendrá en ({time}).",
+        "you-using-demo-server": "Está utilizando el servidor público de demostración de ONLYOFFICE Docs. Por favor, evite almacenar cualquier dato privado o confidencial."
+      }
+    },
+    "main": {
+      "empty-file-list": "Aquí aún no hay nada. Suba o cree un archivo para comenzar."
+    }, 
+    "create": {
+      "title": "Crear con ONLYOFFICE",
+      "fields": {
+        "title": "Título",
+        "document-type": {
+          "title": "Tipo de documento",
+          "options": {
+            "word": "Documento",
+            "cell": "Hoja de cálculo",
+            "slide": "Presentación",
+            "pdf": "Formulario PDF"
+          }
+        },
+        "new-document": "Nuevo documento"
+      },
+      "messages": {
+        "invalid-file-name": "El nombre del archivo contiene caracteres no válidos: \\ / : * ? \" < > |",
+        "attachment-created": "El archivo adjunto \"{filename}\" se ha creado correctamente.",
+        "create-attachment-failed": "Error al crear el archivo adjunto. Por favor, inténtelo de nuevo."
+      }
+    }
+  },
+  "error-state": {
+    "common": {
+      "title": "Error al cargar la aplicación",
+      "description": "Se ha producido un error inesperado al cargar la aplicación. Por favor, vuelva a cargarla para continuar."
+    },
+    "docs-api-undefined": {
+      "title": "Error al cargar ONLYOFFICE Docs",
+      "description": "No se puede acceder al servidor de ONLYOFFICE Docs. Por favor, póngase en contacto con el administrador."
+    }
+  },
+  "buttons": {
+    "create": {
+      "title": "Crear"
+    },
+    "cancel": {
+      "title": "Cancelar"
+    },
+    "close": {
+      "title": "Cerrar"
+    },
+    "save": {
+      "title": "Guardar"
+    },
+    "get-now": {
+      "title": "Obtener ahora"
+    },
+    "reload-app": {
+      "title": "Recargar aplicación"
+    },
+    "create-in-app": {
+      "title": "Crear con ONLYOFFICE"
+    },
+    "view-in-app": {
+      "title": "Ver en ONLYOFFICE"
+    },
+    "edit-in-app": {
+      "title": "Editar en ONLYOFFICE"
+    },
+    "download": {
+      "title": "Descargar"
+    }
+  },
+  "labels": {
+    "warning": "¡Advertencia!",
+    "loading": "Cargando",
+    "last-updated": "{size} / Última actualización: {time} por {user}"
+  },
+  "docs-cloud-banner": {
+    "header": "ONLYOFFICE Docs Cloud",
+    "description": "Inicie fácilmente los editores en la nube sin necesidad de descargas ni instalaciones"
+  }
+}

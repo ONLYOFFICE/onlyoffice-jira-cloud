@@ -1,0 +1,89 @@
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/${FORGE_APP_ID}
+
+modules:
+  jira:adminPage:
+    - key: settings-page
+      title:
+        i18n: page.settings.title
+      render: native
+      useAsConfig: true
+      resource: settings-page
+      resolver:
+        function: settings-page-resolver
+  jira:issuePanel:
+    - key: main-page
+      title: ONLYOFFICE Docs
+      icon: resource:assets;images/onlyoffice.svg
+      resource: custom-ui
+      resolver:
+        function: main-page-resolver
+  function:
+    - key: settings-page-resolver
+      handler: index.settingsPageResolver
+    - key: main-page-resolver
+      handler: index.mainPageResolver
+
+resources:
+  - key: settings-page
+    path: src/frontend/settingsPage.tsx
+  - key: custom-ui
+    path: static/onlyoffice-docs-jira-cloud-custom-ui/build
+  - key: assets
+    path: src/assets
+
+translations:
+  resources:
+    - key: de-DE
+      path: locales/de-DE.json
+    - key: en-US
+      path: locales/en-US.json
+    - key: es-ES
+      path: locales/es-ES.json
+    - key: fr-FR
+      path: locales/fr-FR.json
+    - key: it-IT
+      path: locales/it-IT.json
+    - key: ru-RU
+      path: locales/ru-RU.json
+
+  fallback:
+    default: en-US
+
+remotes:
+  - key: onlyoffice-backend
+    baseUrl: "${FORGE_REMOTE_APP_URL}"
+    operations:
+      - compute
+    auth:
+      appSystemToken:
+        enabled: true
+      appUserToken:
+        enabled: true
+
+environment:
+  variables:
+    - FORGE_APP_ID
+    - FORGE_REMOTE_APP_URL
+
+permissions:
+  content:
+    scripts:
+      - 'unsafe-inline'
+    styles:
+      - 'unsafe-inline'
+  scopes:
+    - storage:app
+    - read:jira-user
+    - read:jira-work
+    - write:jira-work
+    - read:app-system-token
+    - read:app-user-token
+  external:
+    frames:
+      - address: ${FORGE_REMOTE_APP_URL}/editor/jira
+      - address: https://api.media.atlassian.com/

@@ -1,4 +1,4 @@
-name: CI for forge
+name: CI
 
 on:
   workflow_dispatch:
@@ -6,15 +6,15 @@ on:
     types: [opened, reopened]
     branches: [master, develop]
     paths:
-      - 'forge/**/*.ts'
-      - 'forge/**/*.tsx'
-      - 'forge/**/*.yml'
+      - '**/*.ts'
+      - '**/*.tsx'
+      - '**/*.yml'
   push:
     branches: [master, develop]
     paths:
-      - 'forge/**/*.ts'
-      - 'forge/**/*.tsx'
-      - 'forge/**/*.yml'
+      - '**/*.ts'
+      - '**/*.tsx'
+      - '**/*.yml'
 
 jobs:
   lint:
@@ -31,10 +31,10 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd ${{ github.workspace }}/forge
+          cd ${{ github.workspace }}
           npm install
 
       - name: Run Code Style Checks
         run: |
-          cd ${{ github.workspace }}/forge
+          cd ${{ github.workspace }}
           npm run eslint
