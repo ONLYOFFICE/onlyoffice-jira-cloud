@@ -41,12 +41,6 @@
     "editor": {
       "messages": {
         "stop-editing-by-cause-delete": "La modifica di questo documento è stata interrotta perché è stato rimosso dal ticket.",
-        "stop-editing-by-cause-session-expired": "La modifica di questo documento è stata interrotta perché la sessione corrente è scaduta.",
-        "session-expired": "La sessione corrente è scaduta.",
-        "please-save-changes": "Assicurati di salvare eventuali modifiche per evitare la perdita dei dati.",
-        "editor-will-be-reloaded": "L'editor verrà ricaricato per continuare a lavorare in ({time}).",
-        "update-session-failed": "Purtroppo non è stato possibile estendere la sessione.",
-        "editin-will-stop": "La modifica terminerà in ({time}).",
         "you-using-demo-server": "Stai usando il server demo pubblico di ONLYOFFICE Docs. Evita di salvare dati privati o sensibili."
       }
     },
