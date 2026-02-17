@@ -41,12 +41,6 @@
     "editor": {
       "messages": {
         "stop-editing-by-cause-delete": "Editing of this document has been stopped because it has been removed from the issue.",
-        "stop-editing-by-cause-session-expired": "Editing of this document has been stopped because the current session has expired.",
-        "session-expired": "The current session has expired.",
-        "please-save-changes": "Please make sure to save any changes to prevent data loss.",
-        "editor-will-be-reloaded": "The editor will be reloaded to continue working in ({time}).",
-        "update-session-failed": "Unfortunately, it was not possible to extend the session.",
-        "editin-will-stop": "Editing will stop in ({time}).",
         "you-using-demo-server": "You are using the public demo server of ONLYOFFICE Docs. Please avoid storing any private or sensitive data."
       }
     },

@@ -27,6 +27,7 @@ export interface Format {
 export interface RemoteAppAuthorization {
   token: string;
   remoteAppUrl: string;
+  sessionExpires: number;
 }
 
 export interface User {

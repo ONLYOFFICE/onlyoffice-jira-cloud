@@ -41,12 +41,6 @@
     "editor": {
       "messages": {
         "stop-editing-by-cause-delete": "Die Bearbeitung dieses Dokuments wurde gestoppt, da es aus der Ausgabe entfernt wurde.",
-        "stop-editing-by-cause-session-expired": "Die Bearbeitung dieses Dokuments wurde gestoppt, da die aktuelle Sitzung abgelaufen ist.",
-        "session-expired": "Die aktuelle Sitzung ist abgelaufen.",
-        "please-save-changes": "Bitte speichern Sie alle Änderungen, um Datenverlust zu vermeiden.",
-        "editor-will-be-reloaded": "Der Editor wird neu geladen, damit Sie in ({time}) weiterarbeiten können.",
-        "update-session-failed": "Eine Verlängerung der Sitzung war leider nicht möglich.",
-        "editin-will-stop": "Die Bearbeitung wird in ({time}) beendet.",
         "you-using-demo-server": "Sie verwenden den öffentlichen Demoserver von ONLYOFFICE Docs. Bitte vermeiden Sie die Speicherung privater oder sensibler Daten."
       }
     },

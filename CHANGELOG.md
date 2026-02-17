@@ -1,5 +1,9 @@
 # Change Log
 
+## 2.2.0
+## Fixed
+- replaced reactive session expiration handling with proactive reauthorization
+
 ## 1.1.0
 ## Added
 - list of files
