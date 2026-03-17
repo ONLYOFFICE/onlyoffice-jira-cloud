@@ -86,6 +86,21 @@ export const getPermissions = async (
   );
 };
 
+export const getMyPermissions = async (permissions: string[]) => {
+  return await _executeRequest<Record<string, Permission>>(
+    async () => {
+      return await requestJira(
+        "/rest/api/3/mypermissions?" + "&permissions=" + permissions.join(","),
+      );
+    },
+    async (response: Response) => {
+      const data = await response.json();
+
+      return data.permissions || {};
+    },
+  );
+};
+
 async function _executeRequest<T>(
   onRequest: () => Promise<Response>,
   onResponse: (response: Response) => T | Promise<T>,

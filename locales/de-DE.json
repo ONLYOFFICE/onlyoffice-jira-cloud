@@ -76,7 +76,8 @@
     },
     "docs-api-undefined": {
       "title": "ONLYOFFICE Docs-Ladefehler",
-      "description": "Der ONLYOFFICE Docs-Server kann nicht erreicht werden. Bitte wenden Sie sich an den Administrator."
+      "description": "Der ONLYOFFICE Docs-Server kann nicht erreicht werden. Bitte wenden Sie sich an den Administrator.",
+      "description-admin": "Der ONLYOFFICE Docs-Server kann nicht erreicht werden. Bitte überprüfen Sie die ONLYOFFICE Docs-Konfiguration."
     }
   },
   "buttons": {
@@ -88,6 +89,9 @@
     },
     "close": {
       "title": "Schließen"
+    },
+    "configure": {
+      "title": "Konfiguration prüfen"
     },
     "save": {
       "title": "Speichern"

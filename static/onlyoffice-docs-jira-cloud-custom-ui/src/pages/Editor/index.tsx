@@ -21,11 +21,15 @@ import React, { useEffect, useState, useRef, useContext } from "react";
 import Button from "@atlaskit/button/new";
 import { Flex, xcss } from "@atlaskit/primitives";
 import Spinner from "@atlaskit/spinner";
-import { events, invoke, view } from "@forge/bridge";
+import { events, invoke, router, view } from "@forge/bridge";
 import { FullContext } from "@forge/bridge/out/types";
 
 import { Attachment, RemoteAppAuthorization } from "../../../src/types/types";
-import { getAttachmentsForIssue, getUsers } from "../../client";
+import {
+  getAttachmentsForIssue,
+  getMyPermissions,
+  getUsers,
+} from "../../client";
 import { AppContext } from "../../context/AppContext";
 
 const styles = {
@@ -53,6 +57,7 @@ export type EditorPageProps = {
 const EditorPage: React.FC<EditorPageProps> = ({ context }) => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const [loading, setLoading] = useState(true);
+  const isAdminRef = useRef<boolean>(false);
   const remoteAppUrl = useRef<string | null>(null);
   const [token, setToken] = useState<string>();
 
@@ -126,14 +131,18 @@ const EditorPage: React.FC<EditorPageProps> = ({ context }) => {
       }
     };
 
-    invoke<RemoteAppAuthorization>("authorizeRemoteApp", {
-      issueId,
-      attachmentId,
-    })
-      .then((data: RemoteAppAuthorization) => {
-        setToken(data.token);
-        remoteAppUrl.current = data.remoteAppUrl;
-        scheduleReauthorization(data.sessionExpires);
+    Promise.all([
+      invoke<RemoteAppAuthorization>("authorizeRemoteApp", {
+        issueId,
+        attachmentId,
+      }),
+      getMyPermissions(["ADMINISTER"]),
+    ])
+      .then(([authData, permissions]) => {
+        isAdminRef.current = permissions["ADMINISTER"]?.havePermission === true;
+        setToken(authData.token);
+        remoteAppUrl.current = authData.remoteAppUrl;
+        scheduleReauthorization(authData.sessionExpires);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -186,7 +195,22 @@ const EditorPage: React.FC<EditorPageProps> = ({ context }) => {
         if (type === "DOCS_API_UNDEFINED") {
           setAppError({
             title: t("error-state.docs-api-undefined.title"),
-            description: t("error-state.docs-api-undefined.description"),
+            description: isAdminRef.current
+              ? t("error-state.docs-api-undefined.description-admin")
+              : t("error-state.docs-api-undefined.description"),
+            primaryAction: isAdminRef.current ? (
+              <Button
+                appearance="primary"
+                onClick={() => {
+                  router.navigate({
+                    target: "module",
+                    moduleKey: "settings-page",
+                  });
+                }}
+              >
+                {t("buttons.configure.title")}
+              </Button>
+            ) : undefined,
             secondaryAction: (
               <Button onClick={closeWindow}>{t("buttons.close.title")}</Button>
             ),

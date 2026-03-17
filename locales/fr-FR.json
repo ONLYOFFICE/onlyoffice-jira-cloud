@@ -76,7 +76,8 @@
     },
     "docs-api-undefined": {
       "title": "Erreur de chargement d’ONLYOFFICE Docs",
-      "description": "Le serveur ONLYOFFICE Docs est inaccessible. Veuillez contacter l'administrateur."
+      "description": "Le serveur ONLYOFFICE Docs est inaccessible. Veuillez contacter l'administrateur.",
+      "description-admin": "Le serveur ONLYOFFICE Docs est inaccessible. Veuillez vérifier la configuration ONLYOFFICE Docs."
     }
   },
   "buttons": {
@@ -88,6 +89,9 @@
     },
     "close": {
       "title": "Fermer"
+    },
+    "configure": {
+      "title": "Vérifier la configuration"
     },
     "save": {
       "title": "Enregistrer"

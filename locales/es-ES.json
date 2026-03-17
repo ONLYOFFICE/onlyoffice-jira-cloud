@@ -76,7 +76,8 @@
     },
     "docs-api-undefined": {
       "title": "Error al cargar ONLYOFFICE Docs",
-      "description": "No se puede acceder al servidor de ONLYOFFICE Docs. Por favor, póngase en contacto con el administrador."
+      "description": "No se puede acceder al servidor de ONLYOFFICE Docs. Por favor, póngase en contacto con el administrador.",
+      "description-admin": "No se puede acceder al servidor de ONLYOFFICE Docs. Compruebe la configuración de ONLYOFFICE Docs."
     }
   },
   "buttons": {
@@ -88,6 +89,9 @@
     },
     "close": {
       "title": "Cerrar"
+    },
+    "configure": {
+      "title": "Comprobar configuración"
     },
     "save": {
       "title": "Guardar"

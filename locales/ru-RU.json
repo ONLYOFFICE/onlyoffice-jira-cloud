@@ -76,7 +76,8 @@
     },
     "docs-api-undefined": {
       "title": "Ошибка загрузки ONLYOFFICE Docs",
-      "description": "Сервер ONLYOFFICE Docs недоступен. Обратитесь к администратору."
+      "description": "Сервер ONLYOFFICE Docs недоступен. Обратитесь к администратору.",
+      "description-admin": "Сервер ONLYOFFICE Docs недоступен. Пожалуйста, проверьте конфигурацию ONLYOFFICE Docs."
     }
   },
   "buttons": {
@@ -88,6 +89,9 @@
     },
     "close": {
       "title": "Закрыть"
+    },
+    "configure": {
+      "title": "Проверить конфигурацию"
     },
     "save": {
       "title": "Сохранить"

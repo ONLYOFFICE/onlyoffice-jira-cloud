@@ -76,7 +76,8 @@
     },
     "docs-api-undefined": {
       "title": "Errore di caricamento ONLYOFFICE Docs",
-      "description": "Il server ONLYOFFICE Docs non è raggiungibile. Contatta l'amministratore."
+      "description": "Il server ONLYOFFICE Docs non è raggiungibile. Contatta l'amministratore.",
+      "description-admin": "Il server ONLYOFFICE Docs non è raggiungibile. Controlla la configurazione di ONLYOFFICE Docs."
     }
   },
   "buttons": {
@@ -88,6 +89,9 @@
     },
     "close": {
       "title": "Chiudi"
+    },
+    "configure": {
+      "title": "Verifica la configurazione"
     },
     "save": {
       "title": "Salva"

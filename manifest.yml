@@ -81,6 +81,7 @@ permissions:
     - read:jira-user
     - read:jira-work
     - write:jira-work
+    - read:permission:jira
     - read:app-system-token
     - read:app-user-token
   external:

@@ -76,7 +76,8 @@
     },
     "docs-api-undefined": {
       "title": "ONLYOFFICE Docs loading error",
-      "description": "ONLYOFFICE Docs server cannot be reached. Please contact admin."
+      "description": "ONLYOFFICE Docs server cannot be reached. Please contact admin.",
+      "description-admin": "ONLYOFFICE Docs server cannot be reached. Please check the ONLYOFFICE Docs configuration."
     }
   },
   "buttons": {
@@ -88,6 +89,9 @@
     },
     "close": {
       "title": "Close"
+    },
+    "configure": {
+      "title": "Check configuration"
     },
     "save": {
       "title": "Save"
