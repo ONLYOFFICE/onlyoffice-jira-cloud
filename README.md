@@ -25,12 +25,6 @@ This app allows users to create and edit office files in [Jira Cloud](https://ww
 * **SLIDE:** POTM, POTX, PPSM, PPSX, PPTM, PPTX
 * **PDF:** PDF
 
-**For editing with possible loss of information:**
-
-* **WORD:** EPUB, FB2, HTML, ODT, OTT, RTF, TXT
-* **CELL:** CSV, ODS, OTS
-* **SLIDE:** ODP, OTP
-
 ## Requirements
  - ONLYOFFICE Docs Atlassian Remote
  - ONLYOFFICE Docs (Document Server)
