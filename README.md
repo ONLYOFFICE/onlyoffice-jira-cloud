@@ -50,7 +50,7 @@ To get ONLYOFFICE Docs Cloud, get started [here](https://www.onlyoffice.com/docs
 ## App installation 📥
 
 1. Go to [marketplace.atlassian.com](http://marketplace.atlassian.com/).
-2. Сhoose the ONLYOFFICE Connector for Jira and click the **Get it now** button.
+2. Choose the ONLYOFFICE Connector for Jira and click the **Get it now** button.
 3. In the pop-up window, select the site where you'd like to install your app and choose the edition you prefer, if multiple editions are available.
 
 ## App configuration ⚙️
